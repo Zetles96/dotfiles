@@ -42,6 +42,9 @@
       enable = true;
       userName = "mln";
       userEmail = "90190656+Zetles96@users.noreply.github.com";
+      extraConfig = {
+        push.autoSetupRemote = true;
+      };
     };
   };
 

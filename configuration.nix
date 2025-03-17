@@ -147,6 +147,7 @@
     # Development
     git
     python3
+    pipx
     gh
     gcc
     gnumake
@@ -158,6 +159,7 @@
     tmux
     htop
     direnv
+    neofetch
     # Virtualization
     virt-manager
     qemu_kvm

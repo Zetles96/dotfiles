@@ -7,13 +7,19 @@
 
   # User Packages
   home.packages = with pkgs; [
+    # Editors
     neovim
     kdePackages.kate
     vscode
+    # Tools
     wireshark
     teamviewer
     rdesktop
+    popsicle
+    # Terminal
     starship
+    # Misc
+    tidal-hifi
   ];
 
   # Program Configurations
@@ -79,7 +85,7 @@
           gray = "#565f89";    # Muted gray for secondary info
           green = "#9ece6a";   # Green for success
         };
-        # Transient prompt (shown after command execution)
+        # Transient prompt
         # transient = {
         #   format = "[$character]($style) "; # Simple prompt with just the character
         # };

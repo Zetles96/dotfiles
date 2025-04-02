@@ -21,6 +21,7 @@
       };
     };
   };
+  
 
   # Time Settings
   time = {
@@ -88,6 +89,10 @@
 
   # Virtualization
   virtualisation = {
+    podman = {
+      enable = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
     docker = {
       enable = true;
       rootless = {
@@ -112,11 +117,15 @@
     nerd-fonts.symbols-only
   ];
 
+
+  users.groups.mln = {};
+  users.groups.mln.gid = 1000;
   # User Configuration
   users.users.mln = {
     isNormalUser = true;
+    group = "mln";
     description = "mln";
-    extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" "libvirtd" "kvm" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" "libvirtd" "kvm" "users"];
     shell = pkgs.zsh;
   };
 
@@ -143,7 +152,7 @@
     wget
     nmap
     bind
-    inetutils
+    inetutils 
     # Development
     git
     python3
@@ -153,6 +162,8 @@
     gnumake
     cmake
     rustup
+    nxpmicro-mfgtools
+    perl
     # Terminal
     ghostty
     picocom
@@ -167,6 +178,10 @@
     virt-viewer
     spice-gtk
     virtio-win
+    dive
+    podman-tui
+    docker-compose
+    podman-compose
     # Utilities
     exfatprogs
     pciutils

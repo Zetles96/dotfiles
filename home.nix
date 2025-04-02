@@ -64,6 +64,19 @@
         push.autoSetupRemote = true;
       };
     };
+    ssh = {
+      enable = true;
+      matchBlocks = {
+        "cct-dev" = {
+          hostname = "192.168.0.111";
+          user = "root";
+          identityFile = "~/.ssh/sma_dev";
+          extraOptions = {
+            "StrictHostKeyChecking" = "no";
+          };
+        };
+      };
+    };
     starship = {
       enable = true;
       enableTransience = true;

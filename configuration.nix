@@ -144,6 +144,16 @@
     allowed-users = [ "@wheel" ];
   };
 
+  environment.etc = {
+    "bin/sh" = {
+      source = "${pkgs.bash}/bin/bash";
+      mode = "0755";
+    };
+    "bin/bash" = {
+      source = "${pkgs.bash}/bin/bash";
+      mode = "0755";
+    };
+  };
   # System Packages
   environment.systemPackages = with pkgs; [
     # Editors
@@ -154,6 +164,8 @@
     bind
     inetutils 
     # Development
+    bash
+    zsh
     git
     python3
     pipx

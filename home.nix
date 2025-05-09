@@ -16,6 +16,7 @@
     teamviewer
     rdesktop
     popsicle
+    avahi
     # Terminal
     starship
     # Misc
@@ -52,7 +53,7 @@
         enable = true;
         plugins = [ "git" "docker" "kubectl" ];
       };
-      initExtra = ''
+      initContent = ''
         eval "$(starship init zsh)"
       '';
     };
@@ -74,6 +75,18 @@
           extraOptions = {
             "StrictHostKeyChecking" = "no";
           };
+        };
+        "imx8" = {
+          user = "root";
+          hostname = "%h";
+          identityFile = "~/.ssh/sma_dev";
+          extraOptions = {
+            "StrictHostKeyChecking" = "no";
+          };
+        };
+        "codesonar" = {
+          user = "codesonar";
+          hostname = "10.254.50.50";
         };
       };
     };

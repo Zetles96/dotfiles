@@ -107,9 +107,22 @@
         runAsRoot = true;
         swtpm.enable = true;
       };
+      onBoot = "start";
+      onShutdown = "suspend";
     };
     spiceUSBRedirection.enable = true;
+
+    virtualbox = {
+      host = {
+        enable = true;
+        enableExtensionPack = true;
+      };
+    };
   };
+
+  security.polkit.enable = true;
+
+  programs.dconf.enable = true;
 
   # Fonts
   fonts.packages = with pkgs; [
@@ -125,7 +138,7 @@
     isNormalUser = true;
     group = "mln";
     description = "mln";
-    extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" "libvirtd" "kvm" "users"];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" "libvirtd" "kvm" "users" "vboxusers"];
     shell = pkgs.zsh;
   };
 

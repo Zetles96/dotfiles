@@ -4,10 +4,11 @@
     font-size: 15px;
     transition: background-color .3s ease-out;
 }
+@import "mocha.css";
 
 window#waybar {
-    background: rgba(26, 27, 38, 0.75);
-    color: #c0caf5;
+    background: rgba(30, 30, 46, 0.75); /* base with transparency */
+    color: @text; /* text */
     font-family: 
         SpaceMono Nerd Font,
         feather;
@@ -18,7 +19,7 @@ window#waybar {
 .modules-center,
 .modules-right
 {
-    background: rgba(0, 0, 8, .7);
+    background: rgba(24, 24, 37, 0.7); /* mantle with transparency */
     margin: 5px 2px;
     padding: 0 0px;
     border-radius: 15px;
@@ -50,6 +51,7 @@ window#waybar {
 #mpd {
     padding: 0 10px;
     border-radius: 15px;
+    color: @text; /* text */
 }
 
 #clock:hover,
@@ -70,38 +72,40 @@ window#waybar {
 #power-profiles-daemon:hover,
 #language:hover,
 #mpd:hover {
-    background: rgba(26, 27, 38, 0.9);
+    background: rgba(30, 30, 46, 0.9); /* base with higher opacity */
+    color: @lavender; /* lavender for hover text */
 }
 
-
 #workspaces button {
-  background: transparent;
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
-  font-weight: 900;
-  font-size: 13pt;
-  color: #c0caf5;
-  border:none;
-  border-radius: 15px;
+    background: transparent;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+    font-weight: 900;
+    font-size: 13pt;
+    color: @subtext1; /* subtext1 */
+    border: none;
+    border-radius: 15px;
 }
 
 #workspaces button.active {
-    background: #13131d; 
+    background: @surface0; /* surface0 */
+    color: @text; /* text */
 }
 
 #workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
-  box-shadow: none;
+    background: @crust; /* crust */
+    color: @text; /* text */
+    box-shadow: none;
 }
 
 #custom-arch {
     margin-left: 5px;
     padding: 0 10px;
     font-size: 25px;
+    color: @sapphire; /* sapphire */
     transition: color .5s;
 }
 #custom-arch:hover {
-    color: #1793d1;
+    color: @blue; /* blue */
 }

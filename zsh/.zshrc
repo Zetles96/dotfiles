@@ -113,3 +113,9 @@ export SDL_VIDEODRIVER=wayland
 export MOZ_ENABLE_WAYLAND=1
 
 eval "$(starship init zsh)"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/zetles/.dart-cli-completion/zsh-config.zsh ]] && . /home/zetles/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

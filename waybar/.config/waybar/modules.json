@@ -1,11 +1,31 @@
 {
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/arch"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "hyprland/language",
+        "battery",
+        "tray"
+    ],
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10,
+        "show-passive-items": true
+    },
     "custom/arch": {
         "format": "󰣇",
         "tooltip": true,
         "tooltip-format": "btw"
     },
-
-
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -38,7 +58,11 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     },
@@ -48,8 +72,7 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-	"on-click": "sh ~/scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
-	 
+        "on-click": "sh ~/scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
     },
     "cpu": {
         "format": "  {usage}%",
@@ -57,7 +80,7 @@
     },
     "memory": {
         "format": "  {}%",
-	"tooltip": true
+        "tooltip": true
     },
     "temperature": {
         "interval": 10,
@@ -67,9 +90,9 @@
         "format": " {temperatureC}°C"
     },
     "hyprland/language": {
-       "format": "  {}",
-       "format-en": "EN",
-       "format-ru": "RU"
+        "format": "  {}",
+        "format-en": "EN",
+        "format-ru": "RU"
     },
     "battery": {
         "states": {
@@ -81,7 +104,13 @@
         "format-charging": "  {capacity}%",
         "format-plugged": "  {capacity}%",
         "format-alt": "{time}  {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -91,5 +120,4 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     }
-
 }

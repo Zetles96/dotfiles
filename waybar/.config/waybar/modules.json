@@ -91,8 +91,18 @@
     },
     "hyprland/language": {
         "format": "  {}",
-        "format-en": "EN",
-        "format-ru": "RU"
+        "format-en": "US",
+        "format-da": "DK",
+        "format-Danish": "DK",
+        "format-English (US)": "US",
+        "on-click": "hyprctl switchxkblayout all next"
+    },
+    "custom/keyboard": {
+        "exec": "$HOME/dotfiles/waybar/.config/waybar/scripts/keyboard-layout.sh",
+        "format": " {}",
+        "on-click": "hyprctl switchxkblayout all next",
+        "return-type": "json",
+        "restart-interval": 1
     },
     "battery": {
         "states": {

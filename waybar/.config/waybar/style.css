@@ -1,6 +1,6 @@
 * {
-    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    /* `otf-font-awesome` and JetBrains Mono Nerd Font are required to be installed for icons */
+    font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 15px;
     transition: background-color .3s ease-out;
 }
@@ -10,7 +10,7 @@ window#waybar {
     background: rgba(30, 30, 46, 0.75); /* base with transparency */
     color: @text; /* text */
     font-family: 
-        SpaceMono Nerd Font,
+        JetBrainsMono Nerd Font,
         feather;
     transition: background-color .5s;
 }
@@ -48,8 +48,9 @@ window#waybar {
 #scratchpad,
 #power-profiles-daemon,
 #language,
+#custom-keyboard,
 #mpd {
-    padding: 0 10px;
+    padding: 0 6px;
     border-radius: 15px;
     color: @text; /* text */
 }
@@ -71,6 +72,7 @@ window#waybar {
 #scratchpad:hover,
 #power-profiles-daemon:hover,
 #language:hover,
+#custom-keyboard:hover,
 #mpd:hover {
     background: rgba(30, 30, 46, 0.9); /* base with higher opacity */
     color: @lavender; /* lavender for hover text */
@@ -79,7 +81,7 @@ window#waybar {
 #workspaces button {
     background: transparent;
     font-family:
-        SpaceMono Nerd Font,
+        JetBrainsMono Nerd Font,
         feather;
     font-weight: 900;
     font-size: 13pt;

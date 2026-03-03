@@ -199,6 +199,7 @@ spawn-at-startup "ghostty"
 spawn-at-startup "firefox"
 spawn-at-startup "discord"
 spawn-at-startup "code"
+spawn-at-startup "sh" "-c" "sleep 3 && niri msg action focus-workspace 1"
 
 // Window rules: assign apps to workspaces (fullscreen)
 window-rule {
@@ -224,6 +225,8 @@ window-rule {
 
 environment {
   XDG_CURRENT_DESKTOP "niri"
+  QT_QPA_PLATFORMTHEME "qt6ct"
+  QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
 }
 hotkey-overlay {
     skip-at-startup

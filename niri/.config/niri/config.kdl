@@ -197,16 +197,16 @@ overview {
 }
 // Spawn applications at startup
 spawn-at-startup "ghostty"
+spawn-at-startup "ghostty"
 spawn-at-startup "firefox"
 spawn-at-startup "discord"
 spawn-at-startup "code"
-spawn-at-startup "sh" "-c" "sleep 3 && niri msg action focus-workspace 1"
+spawn-at-startup "zeditor"
 
-// Window rules: assign apps to workspaces (fullscreen)
+// Window rules: assign apps to workspaces
 window-rule {
     match app-id="com.mitchellh.ghostty"
     open-on-workspace "一"
-    open-maximized true
 }
 window-rule {
     match app-id=r#"firefox$"#
@@ -223,11 +223,16 @@ window-rule {
     open-on-workspace "四"
     open-maximized true
 }
-
+window-rule {
+    match app-id="dev.zed.Zed"
+    open-on-workspace "五"
+    open-maximized true
+}
 environment {
   XDG_CURRENT_DESKTOP "niri"
   QT_QPA_PLATFORMTHEME "qt6ct"
   QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+  SDL_VIDEODRIVER "wayland,x11"
 }
 hotkey-overlay {
     skip-at-startup

@@ -105,14 +105,14 @@ source $ZSH/oh-my-zsh.sh
 
 
 export XDG_SESSION_TYPE=wayland
-export XDG_CURRENT_DESKTOP=Hyprland
-export XDG_SESSION_DESKTOP=Hyprland
+# export XDG_CURRENT_DESKTOP=Hyprland
+# export XDG_SESSION_DESKTOP=Hyprland
 export QT_QPA_PLATFORM=wayland
 export GDK_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 export MOZ_ENABLE_WAYLAND=1
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
